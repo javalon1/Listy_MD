@@ -10,39 +10,36 @@ public class Zadanie {
         listaImion.add(imie);
     }
 
-
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Podaj imie:");
         List<String> listaImion = new ArrayList<>();
         String imie;
 
 
-//        while (true){
-//            imie = scanner.next();
-//            zadanie1(listaImion, imie);
-//            if (imie.equals("-")){
-//                break;
-//            }
-//        }
-
-        //Wersja DO WHILE
-        do {
+        while (true){
             System.out.println("Podaj imie:");
-            imie = scanner.nextLine();
+            imie = scanner.next();
+            if (imie.equals("-")){
+                break;
+            }
             zadanie1(listaImion, imie);
-        } while (!imie.equals("-"));
+        }
 
-        listaImion.remove("-");
+//        //Wersja DO WHILE
+//        do {
+//            System.out.println("Podaj imie:");
+//            imie = scanner.nextLine();
+//            zadanie1(listaImion, imie);
+//        } while (!imie.equals("-"));
+//
+//        listaImion.remove("-");
 
-        System.out.println("Koniec petli");
 
+        System.out.println("Lista imion: ");
         for (String el : listaImion){
             System.out.println(el);
 
         }
-
-
     }
 }
