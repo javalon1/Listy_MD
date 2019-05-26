@@ -6,6 +6,7 @@ public interface MyList<E> {
     boolean add(E e);
     boolean remove(int index);
     //boolean ensureCapacity();
+    String toString();
 
 
 }
